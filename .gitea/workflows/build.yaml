@@ -22,7 +22,4 @@ jobs:
         with:
           registry: gitea.area-51-x.com
           push: true
-          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}
-          github-token: ${{secrets.DOCKER_PASSWORD}}
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.DOCKER_PASSWORD }}
+          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}\

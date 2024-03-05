@@ -2,10 +2,6 @@ name: Build napotd
 
 on: [push]
 
-env:
-  CONTAINER_NAME: napotd
-  ORG_NAME: deltreey
-
 jobs:
   Build-And-Push:
     runs-on: docker
@@ -26,4 +22,4 @@ jobs:
         with:
           registry: gitea.area-51-x.com
           push: true
-          tags: $ORG_NAME/$CONTAINER_NAME:latest, $ORG_NAME/$CONTAINER_NAME:${{gitea.ref_name}}
+          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}

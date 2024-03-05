@@ -20,6 +20,5 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          registry: gitea.area-51-x.com
           push: true
-          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}
+          tags: gitea.area-51-x.com/deltreey/napotd:latest, gitea.area-51-x.com/deltreey/napotd:${{gitea.ref_name}}

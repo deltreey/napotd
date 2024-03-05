@@ -22,4 +22,4 @@ jobs:
         with:
           registry: gitea.area-51-x.com
           push: true
-          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}\
+          tags: deltreey/napotd:latest, deltreey/napotd:${{gitea.ref_name}}

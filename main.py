@@ -1,3 +1,5 @@
+from urllib.parse import urljoin
+
 from bs4 import BeautifulSoup
 from requests import get
 from starlette.responses import RedirectResponse
@@ -17,7 +19,7 @@ def main():
     soup = BeautifulSoup(html, features="html.parser")
     img = soup.find('img')
     image_url = img['src']
-    return url + image_url
+    return urljoin(url, image_url)
     # with open('img.png', 'wb') as out_file:
     #     response = get(url + image_url, stream=True)
     #     for chunk in response:
